@@ -33,14 +33,49 @@
 //   });
 
 // 2. Async/Await     (best practice)
-const emailRef = document.querySelector(".email");
-console.log(emailRef);
+// const emailRef = document.querySelector(".email");
+// console.log(emailRef);
 
-async function main() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
-  const data = await response.json();
-  console.log(data);
-  emailRef.innerHTML = data.email;
+// async function main() {
+//   const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+//   const data = await response.json();
+//   console.log(data);
+//   emailRef.innerHTML = data.email;
+// }
+
+// main();
+
+
+// CREATING A PROMISE
+// "retrun new Promise((resolve, reject) => {})
+
+const statusRef = document.querySelector(".status")
+
+function getSubscriptionStatus() {
+    return new Promise((resolve, reject) => {
+        resolve("VIP")
+    })
 }
 
-main();
+function getVideo(subscriptionStatus) {
+    return new Promise((resolve, reject) => {
+        if(subscriptionStatus === "VIP") {
+            resolve("show Video")
+        } else if (subscriptionStatus === "FREE") {
+            resolve("show trailer")
+        } else {
+            reject("no video")
+        }
+    })
+}
+
+async function main() {
+    const status = await getSubscriptionStatus();
+    statusRef.innerHTML = status
+    console.log(await getVideo(status))
+}
+
+
+
+
+main()
