@@ -49,33 +49,31 @@
 // CREATING A PROMISE
 // "retrun new Promise((resolve, reject) => {})
 
-const statusRef = document.querySelector(".status")
+// const statusRef = document.querySelector(".status")
 
-function getSubscriptionStatus() {
-    return new Promise((resolve, reject) => {
-        resolve("VIP")
-    })
-}
+// function getSubscriptionStatus() {
+//     return new Promise((resolve, reject) => {
+//         resolve("VIP")
+//     })
+// }
 
-function getVideo(subscriptionStatus) {
-    return new Promise((resolve, reject) => {
-        if(subscriptionStatus === "VIP") {
-            resolve("show Video")
-        } else if (subscriptionStatus === "FREE") {
-            resolve("show trailer")
-        } else {
-            reject("no video")
-        }
-    })
-}
+// function getVideo(subscriptionStatus) {
+//     return new Promise((resolve, reject) => {
+//         if(subscriptionStatus === "VIP") {
+//             resolve("show Video")
+//         } else if (subscriptionStatus === "FREE") {
+//             resolve("show trailer")
+//         } else {
+//             reject("no video")
+//         }
+//     })
+// }
 
-async function main() {
-    const status = await getSubscriptionStatus();
-    statusRef.innerHTML = status
-    console.log(await getVideo(status))
-}
-
-
+// async function main() {
+//     const status = await getSubscriptionStatus();
+//     statusRef.innerHTML = status
+//     console.log(await getVideo(status))
+// }
 
 
-main()
+// main()
