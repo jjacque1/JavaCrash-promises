@@ -179,3 +179,17 @@
 // }
 
 // console.log(isOdd(2))
+
+// Q12. If a number is even, return 1 otherwise return -1
+
+// Create a function that takes a number argument and returns 1 if the number is even. If the number is odd return -1.
+
+// booleanInterger(1) -> -1
+// booleanInterger(2) -> 1
+// booleanInterger(5) -> -1
+
+// function booleanInterger(number) {
+//    return number % 2 === 0?  1 : -1;
+// }
+
+// console.log(booleanInterger(1))
