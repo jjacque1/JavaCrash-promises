@@ -120,8 +120,62 @@
 // lessThenOrEqualToZero(0) -> true
 // lessThenOrEqualToZero(-2) -> true
 
-function lessThenOrEqualToZero(number) {
-    return number <= 0
-}
+// function lessThenOrEqualToZero(number) {
+//     return number <= 0
+// }
 
-console.log(lessThenOrEqualToZero(0))
+// console.log(lessThenOrEqualToZero(0))
+
+// Q8. Given a boolean (true or false), return the opposite boolean. 
+
+// OppositeBoolean(true) -> false
+// OppositeBoolean(false) -> true
+
+// function oppositeBoolean(bool) {
+//     return !bool;
+// }
+
+// console.log(oppositeBoolean(true))
+
+// Q9. Is not the number 0
+
+// Given ANY element, return true if it is NOT the number 0.
+
+// isNotZero(5) -> true
+// isNotZero(0) -> flase
+// isNotZero(null) -> true
+
+// function isNotZero(number) {
+//     return number !== 0;
+// }
+
+// console.log(isNotZero(0))
+
+// Q10. Calculate the remainder
+
+// Given two numbers, retrun their remainder when divided by each other.
+
+// calcRemainder(4, 2) -> 0
+// calcRemainder(7, 8) -> 7
+// calcRemainder(9, 8) -> 1
+
+// function calcRemainder(numb1, numb2) {
+//     return numb1 % numb2
+// }
+
+// console.log(calcRemainder(9, 8))
+
+// Q11. Is the number odd?
+
+// Given two numbers, retrun true if the number is odd
+
+// isOdd(1) -> true
+// isOdd(2) -> false
+// isOdd(3) -> true
+
+// function isOdd(num) {
+//    return num % 2 !== 0 
+    
+// }
+
+// console.log(isOdd(2))
