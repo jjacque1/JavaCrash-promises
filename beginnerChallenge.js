@@ -193,3 +193,17 @@
 // }
 
 // console.log(booleanInterger(1))
+
+// Q13. Check if a user is logged in AND subscribed
+
+// create a function that takes in two strings. If the first string is equals to "LOGGED_IN" AND the second is equal to "SUBSCRIBED" return true. otherwise return false.
+
+// isLoggedInAndSubscribed("LOGGED_IN", "SUBSCRIBED") -> true
+// isLoggedInAndSubscribed("LOGGED_IN", "UNSUBSCRIBED") -> false
+// isLoggedInAndSubscribed("LOGGED_OUT", "SUBSCRIBED") -> flase
+
+// function isLoggedInAndSubscribed(string1, string2) {
+//     return string1 === "LOGGED_IN" && string2 === "SUBSCRIBED"; 
+// }
+
+// console.log(isLoggedInAndSubscribed("LOGGED_IN", "SUBSCRIBED"))
