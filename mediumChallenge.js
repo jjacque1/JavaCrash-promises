@@ -48,12 +48,74 @@
 // arrSum([100,200,500]) -> 800
 // arrSum([0,-5,-10]) -> -15
 
-function arrSum(arr) {
-  let sum = 0;
+// function arrSum(arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum = sum + arr[i];
+//   }
+//   return sum;
+// }
+
+// console.log(arrSum([2, 2, 2]));
+
+// Q5.Add up the numbers from a single number
+
+// Given a number, add up all the numbers from one to the number that is given.
+// EX. An inputof 4 wwill give you 1 + 2 + 3 + 4, which equals 10.
+
+// progressiveSum (3) -> 6
+// progressiveSum (4) -> 10
+// progressiveSum (600) -> 180300
+
+// function progressiveSum(num) {
+//   let sum = 0;
+//   for(let i = 1; i <= num; i++) {
+//     sum = sum + i;
+//   }
+//  return sum
+// }
+
+// console.log(progressiveSum(4))
+
+// Q6. Calculate the time
+
+// Givena number in seconds, return this number in mm:ss format.
+
+// calcTime(66) -> "01:06"
+// calcTime(50) -> "00:50"
+// calcTime(300) -> "05:00"
+
+// function calcTime(seconds) {
+//   let timerMinutes = Math.floor(seconds / 60);
+//   let timerSeconds = seconds % 60;
+
+//    if(timerMinutes.toString().length === 1) {
+//     timerMinutes = '0' + timerMinutes
+//    }
+
+//    return timerMinutes + ":" + timerSeconds;
+// }
+
+// console.log(calcTime(500))
+
+// Q7. Find the largest number
+
+// Given an array of numbers, return the largest number of that array
+
+// getMax([5,100,0]) -> 100
+// getMax([12,10,-20]) -> 12
+// getMax([-300,-100,-200]) -> -100
+
+function getMax(arr) {
+  let max = arr[0];
+
   for (let i = 0; i < arr.length; i++) {
-    sum = sum + arr[i];
+    if (arr[i] > max) {
+      max = arr[i];
+    }
   }
-  return sum;
+
+  return max;
 }
 
-console.log(arrSum([2, 2, 2]));
+console.log(getMax([-100, -200, -300]));
