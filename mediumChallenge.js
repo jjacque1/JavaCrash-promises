@@ -106,16 +106,30 @@
 // getMax([12,10,-20]) -> 12
 // getMax([-300,-100,-200]) -> -100
 
-function getMax(arr) {
-  let max = arr[0];
+// function getMax(arr) {
+//   let max = arr[0];
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i];
-    }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+
+//   return max;
+// }
+
+// console.log(getMax([-100, -200, -300]));
+
+
+function largestNumber(arr) {
+let maxNum = arr[0]; 
+
+for(let i = 0; i < arr.length; i++) {
+  if(arr[i] > maxNum) {
+    maxNum = arr[i]
   }
-
-  return max;
+}
+return maxNum
 }
 
-console.log(getMax([-100, -200, -300]));
+console.log(largestNumber([0,4,3,2,1,5,7,9,-1,100]))
