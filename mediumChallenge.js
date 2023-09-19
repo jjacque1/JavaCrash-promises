@@ -120,16 +120,209 @@
 
 // console.log(getMax([-100, -200, -300]));
 
+// function largestNumber(arr) {
+// let maxNum = arr[0];
 
-function largestNumber(arr) {
-let maxNum = arr[0]; 
+// for(let i = 0; i < arr.length; i++) {
+//   if(arr[i] > maxNum) {
+//     maxNum = arr[i]
+//   }
+// }
+// return maxNum
+// }
 
-for(let i = 0; i < arr.length; i++) {
-  if(arr[i] > maxNum) {
-    maxNum = arr[i]
-  }
-}
-return maxNum
-}
+// console.log(largestNumber([0,4,3,2,1,5,7,9,-1,100]))
 
-console.log(largestNumber([0,4,3,2,1,5,7,9,-1,100]))
+// Q8. Reverse a string
+
+// Given a string, retrun the reversed string
+
+// reverseString("abc") -> "cba"
+// reverseString("David") -> "divaD"
+// reverseString("This is cool") -> "looc si sihT"
+
+// 3 Ways to reverse a string:
+
+// 1 - use an invrementing for loop
+// 2 - use a decrementing for loop
+// 3 - use the aray reverse property
+
+// - use an incrementing for loop
+
+// function reverseTheString(str) {
+//   let TheReversedString = "";
+//   for (let i = 0; i < str.length; ++i) {
+//     TheReversedString = str[i] + TheReversedString
+//   }
+//   return TheReversedString
+// }
+
+// console.log(reverseTheString("jackson"))
+
+// - use a decrementing for loop(not best practice)
+
+// function reverseString(str) {
+//   let reversedString = '';
+//   for(let i = str.length - 1; i >= 0; --i) {
+//     reversedString += str[i]
+//   }
+//   return reversedString;
+// }
+
+// console.log(reverseString('abc'));
+
+// - use the aray reverse property
+
+// function reverseString(str) {
+//   return str.split("").reverse("").join("")
+// }
+
+// console.log(reverseString("Jackson"))
+
+// Q9. Turn every element in an array into 0
+
+// Given an array of elements, return the same length array filled with 0's.
+
+// convertToZeros ([5, 100, 0]) -> [0, 0, 0]
+// convertToZeros ([12]) -> [0]
+// convertToZeros ([1, 2, 3, 4, 5]) -> [0, 0, 0, 0, 0]
+
+// Solution 1:  For loop
+// Solution 2: Array 'fill'
+// Solution 3: Array 'map'
+
+// Solution 1:  For loop
+
+// function convertToZeros(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     arr[i] = 0;
+//   }
+//   return arr;
+// }
+
+// console.log(convertToZeros([5, 100, 0]));
+
+// function convertToZeros(arr) {
+//   let newArr = []
+//   for (let i = 0; i < arr.length; i++) {
+//     newArr[i] = 0;
+//   }
+//   return newArr;
+// }
+
+// console.log(convertToZeros([5, 100, 0]));
+
+// Solution 2: Array 'fill'
+
+// function convertToZeros(arr) {
+//   return new Array(arr.length).fill(0);
+// }
+
+// console.log(convertToZeros([1, 2, 3, 4, 5]))
+
+// Solution 3: Array 'map' (Best Practice, most used)
+
+// function convertToZeros(arr) {
+//   return arr.map(elem => 0);
+
+// }
+
+// console.log(convertToZeros([1, 2, 3]))
+
+// // A return is needed in an arrow function if you have {} in the .map method
+
+// function convertToZeros(arr) {
+//   return arr.map(elem => {
+//     return 0
+//   });
+
+// }
+
+// console.log(convertToZeros([1, 2, 3]))
+
+// Q10. Filter out all the apples
+
+// Given an array of fruits, if it is an apple remove it from the array
+
+// removeApples(["Banana", "Apple", "Orange", "Apple"]) -> ["Banana", "Orange"]
+// removeApples(["Banana", "Tomato", "Orange", "Banana"]) -> ["Tomato", "Orange", "Banana"]
+// removeApples(["Banana", "Orange", "Apple"]) -> ["Banana", "Orange"]
+
+// - Solution 1: For loop
+// - Solution 2: Array 'filter'
+
+
+
+// - Solution 1: For loop
+
+// function removeApples(arr) {
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] !== "Apple") {
+//       newArr.push(arr[i]);
+//     }
+//   }
+//   return newArr;
+// }
+
+// console.log(removeApples(["Banana", "Orange", "Apple"]));
+
+
+
+
+
+// - Solution 2: Array 'filter'
+
+// function removeApples(arr) {
+// return arr.filter(elem => elem !== "Apple")
+// }
+
+// console.log(removeApples(["Banana", "Orange", "Apple"]))
+
+
+// // A return is needed in an arrow function if you have {} in the .filter method
+
+// function removeApples(arr) {
+// return arr.filter(elem => {
+//   return elem !== "Apple"
+// })
+// }
+
+// console.log(removeApples(["Banana", "Orange", "Apple"]))
+
+
+// Q11. Filter out all the faly values
+// Given an array of values, filter out all the falsy values and only return the truthy values.
+
+// filterOutFalsy(["", [], null, undefined, "0"]) -> [[], "0"]
+// filterOutFalsy(["Tomato", "Orange", false]) -> ["Tomato", "Orange", "Banana"]
+// filterOutFalsy(["Banana", "Orange", "Apple"]) -> ["Banana", "Orange"]
+
+
+// - Solution 1: For loop
+// - Solution 2: Array 'filter'
+
+
+
+// - Solution 1: For loop
+// function filterOutFalsy(arr) {
+//   let truthyArr = [];
+//   for(let i = 0; i < arr.length; i++) {
+//     if(!!arr[i] === true) {
+//       truthyArr.push(arr[i])
+//     }
+//   }
+//   return truthyArr
+// }
+
+// console.log(filterOutFalsy(["Banana", "Apple", NaN, undefined, null, false, [], 0]))
+
+
+
+// - Solution 2: Array 'filter'
+
+// function filterOutFalsy(arr) {
+// return arr.filter(elem => !!elem === true)
+// }
+
+// console.log(filterOutFalsy(["Banana", "Apple", NaN, undefined, null, false, [], 0]))
