@@ -291,7 +291,7 @@
 // console.log(removeApples(["Banana", "Orange", "Apple"]))
 
 
-// Q11. Filter out all the faly values
+// Q11. Filter out all the falsy values
 // Given an array of values, filter out all the falsy values and only return the truthy values.
 
 // filterOutFalsy(["", [], null, undefined, "0"]) -> [[], "0"]
@@ -328,4 +328,3 @@
 // console.log(filterOutFalsy(["Banana", "Apple", NaN, undefined, null, false, [], 0]))
 
 
-// 49:09
