@@ -328,3 +328,39 @@
 // console.log(filterOutFalsy(["Banana", "Apple", NaN, undefined, null, false, [], 0]))
 
 
+// TRY IT YOURSELF
+
+// function filterOutFalsy(arr) {
+//     let truthyArr = []
+//     for(let i = 0; i < arr.length; i++) {
+//         if(!!arr[i] === true) {
+//             truthyArr.push(arr[i])
+//         }
+//     }
+
+//     return truthyArr
+// }
+
+// console.log(filterOutFalsy(["Banana", "Apple", NaN, undefined, null, false, [], 0]))
+
+
+
+// function filterOutFalsy(arr) {
+//     return arr.filter(elem => !!elem === true)
+// }
+
+// console.log(filterOutFalsy(["Banana", "Apple", NaN, undefined, null, false, [], 0]))
+
+
+// Q12. Truthy to true, Falsy to false
+// Given an array of truthy and falsy values, retur the same array of elemets into its boolean value.
+
+// convertToBoolean([500, 0, "Jackson", "", []]) -> [true, flase, true, false, true]
+
+// function convertToBoolean(arr) {
+//     return arr.map(elem => !!elem)
+// }
+
+// console.log(convertToBoolean([500, 0, "Jackson", "", []]))
+
+
