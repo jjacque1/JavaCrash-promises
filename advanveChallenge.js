@@ -20,8 +20,24 @@
 // console.log(showRating(3))
 
 
+// function showRating(rating) {
+//     let ratings = "";
+//     for(let i = 0; i < Math.floor(rating); i++) {
+//         ratings = ratings + "*"
+//         if(i !== Math.floor(rating) - 1) {
+//             ratings = ratings + " "
+//         }
+//     }
+//     if(!Number.isInteger(rating)) {
+//         ratings = ratings + "."
+//     }
+//     return ratings;
+// }
+
+// console.log(showRating(4.5))
+
 function showRating(rating) {
-    let ratings = "";
+    let ratings = ""
     for(let i = 0; i < Math.floor(rating); i++) {
         ratings = ratings + "*"
         if(i !== Math.floor(rating) - 1) {
@@ -29,7 +45,7 @@ function showRating(rating) {
         }
     }
     if(!Number.isInteger(rating)) {
-        ratings = ratings + " ."
+        ratings = ratings + " "
     }
     return ratings;
 }
