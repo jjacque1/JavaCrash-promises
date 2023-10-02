@@ -85,9 +85,49 @@
 
 // Q5. Find all the posts by a single user
 
-// Call this API "https://jsonplaceholderr.typicode/posts" and return all the posts by any given user id.
+// Call this API "https://jsonplaceholder.typicode.com/posts" and return all the posts by any given user id.
 
-                        
+// postsByuser(4) ->
 
+// async function postsByUser(userId) {
+//     const promise = await fetch("https://jsonplaceholder.typicode.com/posts");
 
-// postsByuser(4) -> 
+//     const result = await promise.json()
+
+//     const posts = result.filter(element => element.userId === userId)
+
+//     console.log(posts)
+//   }
+
+//   postsByUser(4)
+
+// async function postsByUser(userId) {
+//   const promise = await fetch("https://jsonplaceholder.typicode.com/posts");
+// // First we are getting the promise for the fetch API
+//   const result = await promise.json()
+// // Second we are converting the promise to json which is something the frontend can read
+// // While we are waiting for the conversion to happen, we need to use "await" because the conversion does not happen imediately.
+// // When we use await, we have to pair it with an "async" function
+//   const posts = result.filter(element => element.userId === userId)
+// // We have alredy converted the promise so we have the result of the conversion
+// // Then we filter the promise using (.filter)to find what we are looking for
+//   console.log(posts)
+// }
+
+// postsByUser(4)
+
+// Q6. First 6 incomplete Todos
+
+// Call thi API "https://jsonplaceholder.typicode.com/todos"
+
+async function incompleteTodos(completed) {
+  const promise = await fetch("https://jsonplaceholder.typicode.com/todos");
+
+  const results = await promise.json();
+
+  const todos = results.filter((elem) => !elem.completed).slice(0, 6);
+
+  console.log(todos);
+}
+
+incompleteTodos();
