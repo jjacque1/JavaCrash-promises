@@ -81,4 +81,13 @@
 //     { id: 3, price: 60 },
 //     { id: 4, price: 10 },
 //   ])
-// );
+// );   n
+
+// Q5. Find all the posts by a single user
+
+// Call this API "https://jsonplaceholderr.typicode/posts" and return all the posts by any given user id.
+
+                        
+
+
+// postsByuser(4) -> 
